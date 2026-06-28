@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.UUID;
@@ -27,10 +29,10 @@ public class ExpenseEntity {
     private String item;
 
     @Column (name = "AMOUNT")
-    private float amount;
+    private BigDecimal amount;
 
     @Column (name = "EXPENSE_DATE")
-    private Date expenseDate;
+    private LocalDate expenseDate;
 
     @Column (name = "NOTES")
     private String notes;
