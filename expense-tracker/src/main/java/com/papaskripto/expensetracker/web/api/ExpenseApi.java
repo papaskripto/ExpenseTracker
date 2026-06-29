@@ -35,8 +35,8 @@ public class ExpenseApi {
         return this.expenseService.addExpense (expense);
     }
 
-    @DeleteMapping ("/{id}")
+    @DeleteMapping ("/{expenseId}")
     public void deleteExpense (@PathVariable (name = "expenseId") UUID expenseId, @RequestBody Expense expense) {
-        return this.expenseService.deleteExpense (expenseId);
+        this.expenseService.deleteExpense (expenseId);
     }
 }
